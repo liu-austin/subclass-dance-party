@@ -24,4 +24,65 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+
+}
+
+/* .mario0 {
+  width: 30px;
+  height: 60px;
+  background-image: url('images/Mario Crazy/mario0.png');
+  border:0px;
+  border-radius:0px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mario1 {
+  background-image: url('images/Mario Crazy/mario1.png');
+
+} */
+
+/* Styles for the alternating / transition effect. */
+.toggle-image {
+  position: absolute;
+ width: 100%;
+ top: 0;
+ left: 0;
+  height: 800px;
+ transition: opacity 1s ease-in-out;
+}
+
+/* Styles for the specific images. */
+.mario0 {
+ background-image: url('images/Mario Crazy/mario0.png');
+ border:0px;
+ border-radius:0px;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 30px;
+ height: 60px;
+}
+
+.mario1 {
+ background-image: url('images/Mario Crazy/mario1.png');
+opacity:0
+
+}
+
+.mario2 {
+ background-image: url('images/Mario Crazy/mario2.png');
+opacity:0;
+}
+
+.mario0.show {
+ opacity: 1;
+}
+
+.mario1.show {
+ opacity: 1;
+}
+mario2.show {
+ opacity: 1;
 }
