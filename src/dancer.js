@@ -20,8 +20,12 @@ Dancer.prototype.step = function() {
     this.$node.css(styleSettings);
   };
 
-  Dancer.prototype.move = function() {
+  Dancer.prototype.jump = function() {
     this.setPosition(this.top + (Math.round(Math.random()) ? 1 : -1) * (Math.random() * 125), this.left + (Math.round(Math.random()) ? 1 : -1) * (Math.random() * 125));
+  };
+
+  Dancer.prototype.move = function() {
+    this.setPosition(this.top, this.left + (Math.round(Math.random()) ? 1 : -1) * (Math.random() * 125));
   };
 
 Dancer.prototype.lineUp = function() {
