@@ -6,50 +6,81 @@ body{
   background-color:#444;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+body {
   color: lightblue;
+  background-image:url('images/movingfloor.gif'); background-repeat:repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-.title, .addDancerButton{
+
+.title, .addDancerButton, .lineUpButton{
   padding:5px 12px;
   float:right;
+  color: white;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: #f0134d;
+  z-index: 100;
+  color: white;
 }
 .title{
-  background-color: #777;
+
+  background-color: #f0134d;
 }
-.dancer{
+.dancer {
   border:10px solid red;
   border-radius:10px;
   position:absolute;
-
 }
 
-/* .mario0 {
-  width: 30px;
-  height: 60px;
-  background-image: url('images/Mario Crazy/mario0.png');
-  border:0px;
-  border-radius:0px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+.color1 {
+  border:10px solid pink;
 }
 
-.mario1 {
-  background-image: url('images/Mario Crazy/mario1.png');
+.color2 {
+  border:10px solid cyan;
+}
 
-} */
+.color3 {
+  border:10px solid yellow;
+}
+
+.color4 {
+  border:10px solid purple;
+}
+
+.color5 {
+  border:10px solid greenyellow;
+}
+
+.color1.show {
+  opacity: 1;
+ }
+ .color2.show {
+  opacity: 1;
+ }
+
+ .color3.show {
+   opacity: 1;
+  }
+
+  .color4.show {
+   opacity: 1;
+  }
+  .color5.show {
+   opacity: 1;
+  }
 
 /* Styles for the alternating / transition effect. */
 .toggle-image {
   position: absolute;
- width: 100%;
+ /* width: 100%; */
  top: 0;
  left: 0;
-  height: 800px;
+  /* height: 800px; */
  transition: opacity 1s ease-in-out;
 }
 
@@ -61,8 +92,8 @@ body, a:link, a:visited, a:active{
  background-position: center center;
  background-repeat: no-repeat;
  background-size: cover;
- width: 30px;
- height: 60px;
+ width: 60px;
+ height: 80px;
 }
 
 .mario1 {
@@ -76,6 +107,28 @@ opacity:0
 opacity:0;
 }
 
+.mario3 {
+  background-image: url('images/Mario Crazy/mario3.png');
+ opacity:0
+
+ }
+
+ .mario4 {
+  background-image: url('images/Mario Crazy/mario4.png');
+ opacity:0;
+ }
+
+ .mario5 {
+  background-image: url('images/Mario Crazy/mario5.png');
+ opacity:0
+
+ }
+
+ .mario6 {
+  background-image: url('images/Mario Crazy/mario6.png');
+ opacity:0;
+ }
+
 .mario0.show {
  opacity: 1;
 }
@@ -83,6 +136,122 @@ opacity:0;
 .mario1.show {
  opacity: 1;
 }
-mario2.show {
+.mario2.show {
  opacity: 1;
 }
+
+.mario3.show {
+  opacity: 1;
+ }
+
+ .mario4.show {
+  opacity: 1;
+ }
+ .mario5.show {
+  opacity: 1;
+ }
+
+ .mario6.show {
+   opacity: 1;
+ }
+
+ .luigi0 {
+  background-image: url('images/LuigiDancing/luigi0.png');
+  border:0px;
+  border-radius:0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 65px;
+  height: 105px;
+ }
+
+ .luigi1 {
+  background-image: url('images/LuigiDancing/luigi1.png');
+ opacity:0
+ }
+
+ .luigi2 {
+  background-image: url('images/LuigiDancing/luigi2.png');
+ opacity:0;
+ }
+
+ .luigi3 {
+   background-image: url('images/LuigiDancing/luigi3.png');
+  opacity:0
+
+  }
+
+  .luigi4 {
+   background-image: url('images/LuigiDancing/luigi4.png');
+  opacity:0;
+  }
+
+  .luigi5 {
+   background-image: url('images/LuigiDancing/luigi5.png');
+  opacity:0
+
+  }
+
+  .luigi6 {
+   background-image: url('images/LuigiDancing/luigi6.png');
+  opacity:0;
+  }
+
+ .luigi0.show {
+  opacity: 1;
+ }
+
+ .luigi1.show {
+  opacity: 1;
+ }
+ .luigi2.show {
+  opacity: 1;
+ }
+
+ .luigi3.show {
+   opacity: 1;
+  }
+
+  .luigi4.show {
+   opacity: 1;
+  }
+  .luigi5.show {
+   opacity: 1;
+  }
+
+  .luigi6.show {
+    opacity: 1;
+  }
+
+  .yoshi0 {
+    background-image: url('images/YoshiWin/yoshi0.png');
+    border:0px;
+    border-radius:0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85px;
+    height: 95px;
+   }
+
+   .yoshi1 {
+    background-image: url('images/YoshiWin/yoshi1.png');
+   opacity:0
+   }
+
+   .yoshi2 {
+    background-image: url('images/YoshiWin/yoshi2.png');
+   opacity:0;
+   }
+
+   .yoshi0.show {
+    opacity: 1;
+   }
+   .yoshi1.show {
+    opacity: 1;
+   }
+
+   .yoshi2.show {
+     opacity: 1;
+   }
