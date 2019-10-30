@@ -37,5 +37,41 @@ $(document).ready(function() {
       window.dancers[i].lineUp();
     }
   });
+  $('.interactButton').on('click', function(event) {
+    var corners = {};
+    corners.topLeft = [];
+    corners.topRight = [];
+    corners.bottomLeft = [];
+    corners.bottomRight = [];
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].top >= ($("body").height() / 2) && window.dancers[i].left < ($("body").width() / 2)) {
+        corners.bottomLeft.push(window.dancers[i]);
+      } else if (window.dancers[i].top >= ($("body").height() / 2) && window.dancers[i].left >= ($("body").width() / 2)) {
+        corners.bottomRight.push(window.dancers[i]);
+      } else if (window.dancers[i].top < ($("body").height() / 2) && window.dancers[i].left >= ($("body").width() / 2)) {
+        corners.topRight.push(window.dancers[i]);
+      } else {
+        corners.topLeft.push(window.dancers[i]);
+      }
+    }
+    var topLeftCenter = [$("body").height() / 4, $("body").width() / 4];
+    var topRightCenter = [$("body").height() / 4, 3 * $("body").width() / 4];
+    var bottomLeftCenter = [3 * $("body").height() / 4, $("body").width() / 4];
+    var bottomRightCenter = [3 * $("body").height() / 4, 3 * $("body").width() / 4];
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (corners.topLeft.includes(window.dancers[i])) {
+        window.dancers[i].interact(topLeftCenter[0], topLeftCenter[1]);
+      } else if (corners.topRight.includes(window.dancers[i])) {
+        window.dancers[i].interact(topRightCenter[0], topRightCenter[1]);
+      } else if (corners.bottomLeft.includes(window.dancers[i])) {
+        window.dancers[i].interact(bottomLeftCenter[0], bottomLeftCenter[1]);
+      } else {
+        window.dancers[i].interact(bottomRightCenter[0], bottomRightCenter[1]);
+      }
+    }
+  });
+
+
 });
 
